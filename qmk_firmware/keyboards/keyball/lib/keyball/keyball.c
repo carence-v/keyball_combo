@@ -31,7 +31,7 @@ const uint8_t SCROLL_DIV_MAX = 7;
 
 const uint16_t AML_TIMEOUT_MIN = 100;
 const uint16_t AML_TIMEOUT_MAX = 65535;
-const uint16_t AML_TIMEOUT_QU  = 50;   // Quantization Unit
+const uint16_t AML_TIMEOUT_QU  = 500;   // Quantization Unit
 
 static const char BL = '\xB0'; // Blank indicator character
 static const char LFSTR_ON[] PROGMEM = "\xB2\xB3";
@@ -503,8 +503,8 @@ void keyball_oled_render_layerinfo(void) {
         oled_write_P(LFSTR_OFF, false);
     }
 
-    oled_write(format_4d(get_auto_mouse_timeout() / 10) + 1, false);
-    oled_write_char('0', false);
+    oled_write(format_4d(get_auto_mouse_timeout() / 1000) + 1, false);
+    oled_write_char('s', false);
 #    else
     oled_write_P(PSTR("\xC2\xC3\xB4\xB5 ---"), false);
 #    endif
