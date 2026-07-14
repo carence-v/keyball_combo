@@ -314,3 +314,18 @@ void oledkit_render_info_user(void)
   oled_write(get_u8_str(get_highest_layer(layer_state), ' '), false);
 }
 #endif
+
+
+// combo setting
+#ifdef COMBO_ENABLE
+
+// ESC
+const uint16_t PROGMEM my_esc[] = {KC_A, KC_S, COMBO_END};
+// UP Arrow
+const uint16_t PROGMEM my_up[] = {KC_I, KC_O, COMBO_END};
+
+combo_t key_combos[] = {
+    COMBO(my_esc, KC_ESC),
+    COMBO(my_up, KC_UP),
+};
+#endif
