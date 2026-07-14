@@ -52,8 +52,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 
-#define NO_DEBUG             // デバッグ用コードの除外
-#define NO_PRINT             // 出力プリント（printf）用コードの除外
 #define NO_ACTION_ONESHOT    // ワンショットキー機能の除外
 #define NO_ACTION_MACRO      // アクションマクロ機能の除外
 #define NO_ACTION_FUNCTION   // アクション関数機能の除外
