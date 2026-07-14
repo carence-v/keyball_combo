@@ -240,7 +240,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [1] = LAYOUT_universal(
     _______  ,  KC_F1   , KC_F2    , KC_F3   , KC_F4    , KC_F5    ,                                         KC_F6    , KC_F7    , KC_F8    , KC_F9    , KC_F10   , KC_F11   ,
-    _______  ,  _______ , _______  , KC_UP   , KC_ENT   , KC_DEL   ,                                         KC_PGUP  , KC_BTN1  , KC_UP    , KC_BTN2  , KC_BTN3  , KC_F12   ,
+    _______  ,  _______ , _______  , KC_UP   , KC_ENT   , KC_DEL   ,                                         KC_PGUP  , KC_MY_BTN1  , KC_MY_BTN2 , _______  , _______  , KC_F12   ,
     _______  ,  _______ , KC_LEFT  , KC_DOWN , KC_RGHT  , KC_BSPC  ,                                         KC_PGDN  , KC_LEFT  , KC_DOWN  , KC_RGHT  , _______  , _______  ,
                   _______  , _______ , _______  ,         _______  , _______  ,                   _______  , _______  , _______       , _______  , _______
   ),
@@ -321,11 +321,17 @@ void oledkit_render_info_user(void)
 
 // ESC
 const uint16_t PROGMEM my_esc[] = {KC_A, KC_S, COMBO_END};
-// UP Arrow
-const uint16_t PROGMEM my_up[] = {KC_I, KC_O, COMBO_END};
+// Arrow
+const uint16_t PROGMEM my_up[] = {KC_I, KC_U, COMBO_END};
+const uint16_t PROGMEM my_down[] = {KC_M, KC_COMM, COMBO_END};
+const uint16_t PROGMEM my_left[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM my_right[] = {KC_K, KC_L, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(my_esc, KC_ESC),
     COMBO(my_up, KC_UP),
+    COMBO(my_down, KC_DOWN),
+    COMBO(my_left, KC_LEFT),
+    COMBO(my_right, KC_RIGHT),
 };
 #endif
