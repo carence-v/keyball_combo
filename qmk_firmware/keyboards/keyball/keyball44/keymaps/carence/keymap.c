@@ -77,9 +77,10 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       rgblight_sethsv_noeeprom(HSV_CYAN);
       break;
     case 2:
-      rgblight_mode_noeeprom(RGBLIGHT_MODE_RAINBOW_MOOD);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_RAINBOW_SWIRL);
       break;
     case 3:
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING);
       rgblight_sethsv_noeeprom(HSV_PURPLE);
       break;
     case 4:
