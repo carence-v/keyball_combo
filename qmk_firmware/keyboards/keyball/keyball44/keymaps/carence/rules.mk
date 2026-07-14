@@ -6,3 +6,5 @@ VIA_ENABLE = yes
 
 COMBO_ENABLE = yes
 COMBO_TERM = 100
+
+MUSIC_ENABLE = no

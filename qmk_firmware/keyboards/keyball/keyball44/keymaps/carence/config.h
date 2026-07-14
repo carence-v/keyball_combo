@@ -22,7 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // 容量削減のため以下をオミット
  #ifdef RGBLIGHT_ENABLE
- #define RGBLIGHT_EFFECT_BREATHING
+// #define RGBLIGHT_EFFECT_BREATHING
 // #define RGBLIGHT_EFFECT_RAINBOW_MOOD
  #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
 // #define RGBLIGHT_EFFECT_SNAKE
@@ -46,3 +46,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_ONLY_FROM_LAYER 0      // コンボの参照を常にレイヤー０にする
 
 #define AUTO_MOUSE_TIME 10000      // オートマウスレイヤーの継続時間をデフォルト10秒に設定
+
+#define LAYER_STATE_8BIT      // 容量削減用途でレイヤー状態を8ビットにする
+#define NO_MUSIC_MODE         // 容量削減用途で音楽モードをオミットする
