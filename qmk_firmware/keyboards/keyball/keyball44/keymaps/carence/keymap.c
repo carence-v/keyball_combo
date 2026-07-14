@@ -72,7 +72,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       rgblight_sethsv_noeeprom(HSV_SPRINGGREEN);
       break;
     case 1:
-      rgblight_sethsv_noeeprom(HSV_PINK);
+      rgblight_sethsv_noeeprom(HSV_RED);
       break;
     case 2:
       rgblight_sethsv_noeeprom(HSV_AZURE);
@@ -116,9 +116,7 @@ JA_AND,
 FH_HUSH,
 JE_EXCL,
 FN_NAMI,
-JT_TASU,
 FY_YAMA,
-FK_KAKE,
 
 // command
 QW_ESC,
@@ -142,9 +140,7 @@ const uint16_t PROGMEM my_ja[] = {KC_J, KC_A, COMBO_END};
 const uint16_t PROGMEM my_fh[] = {KC_F, KC_H, COMBO_END};
 const uint16_t PROGMEM my_je[] = {KC_J, KC_E, COMBO_END};
 const uint16_t PROGMEM my_fn[] = {KC_F, KC_N, COMBO_END};
-const uint16_t PROGMEM my_jt[] = {KC_J, KC_T, COMBO_END};
 const uint16_t PROGMEM my_fy[] = {KC_F, KC_Y, COMBO_END};
-const uint16_t PROGMEM my_fk[] = {KC_F, KC_K, COMBO_END};
 
 // command
 const uint16_t PROGMEM my_qw[] = {KC_Q, KC_W, COMBO_END};
@@ -157,20 +153,18 @@ const uint16_t PROGMEM my_jk[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM my_kl[] = {KC_K, KC_L, COMBO_END};
 
 combo_t key_combos[] = {
-[JQ_QUES] = COMBO(my_jq, KC_QUES),
-[JS_SING] = COMBO(my_js, KC_QUOT),
-[JW_DOUB] = COMBO(my_jw, KC_DQUO),
-[JB_BOU] = COMBO(my_jb, KC_PIPE),
-[FP_PER] = COMBO(my_fp, KC_PERC),
-[JD_DOL] = COMBO(my_jd, KC_DLR),
+[JQ_QUES] = COMBO(my_jq, KC_QUES), //[J][Q] の同時押しで?を入力
+[JS_SING] = COMBO(my_js, KC_AMPR), //[J][S] の同時押しでシングルクォーテーションを入力　 (JIS変換用)
+[JW_DOUB] = COMBO(my_jw, KC_AT), //[J][W] の同時押しでダブルクォーテーションを入力　 (JIS変換用)
+[JB_BOU] = COMBO(my_jb, LSFT(KC_JYEN)), //[J][B] の同時押しで縦棒を入力　 (JIS変換用)
+[FP_PER] = COMBO(my_fp, KC_PERC), //[F][P] の同時押しで％を入力　
+[JD_DOL] = COMBO(my_jd, KC_DLR), //[J][D] の同時押しで＄を入力
 [FU_UNDER] = COMBO(my_fu, LSFT(KC_INT1)), //[F][U] の同時押しでアンダースコアを入力 (JIS変換用)
-[JA_AND] = COMBO(my_ja, KC_AMPR),
-[FH_HUSH] = COMBO(my_fh, KC_HASH),
-[JE_EXCL] = COMBO(my_je, KC_EXLM),
-[FN_NAMI] = COMBO(my_fn, KC_TILD),
-[JT_TASU] = COMBO(my_jt, KC_PLUS),
-[FY_YAMA] = COMBO(my_fy, KC_CIRC),
-[FK_KAKE] = COMBO(my_fk, LSFT(KC_8)),
+[JA_AND] = COMBO(my_ja, KC_CIRC), //[J][A] の同時押しでアンドを入力  (JIS変換用)
+[FH_HUSH] = COMBO(my_fh, KC_HASH), //[F][H] の同時押しで＃を入力
+[JE_EXCL] = COMBO(my_je, KC_EXLM), //[J][E] の同時押しで！を入力
+[FN_NAMI] = COMBO(my_fn, KC_PLUS), //[F][N] の同時押しでチルダを入力 (JIS変換用)
+[FY_YAMA] = COMBO(my_fy, KC_PEQL), //[F][Y] の同時押しでハットを入力 (JIS変換用)
 
 // command
 [QW_ESC] = COMBO(my_qw, KC_ESC),
