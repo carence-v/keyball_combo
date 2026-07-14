@@ -122,6 +122,7 @@ FK_KAKE,
 
 // command
 QW_ESC,
+JF_CAPS,
 
 // Navigation
 UI_UP,
@@ -147,6 +148,7 @@ const uint16_t PROGMEM my_fk[] = {KC_F, KC_K, COMBO_END};
 
 // command
 const uint16_t PROGMEM my_qw[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM my_jf[] = {KC_J, KC_F, COMBO_END};
 
 // Navigation
 const uint16_t PROGMEM my_ui[] = {KC_U, KC_I, COMBO_END};
@@ -161,7 +163,7 @@ combo_t key_combos[] = {
 [JB_BOU] = COMBO(my_jb, KC_PIPE),
 [FP_PER] = COMBO(my_fp, KC_PERC),
 [JD_DOL] = COMBO(my_jd, KC_DLR),
-[FU_UNDER] = COMBO(my_fu, LSFT(KC_MINS)),
+[FU_UNDER] = COMBO(my_fu, LSFT(KC_INT1)), //[F][U] の同時押しでアンダースコアを入力 (JIS変換用)
 [JA_AND] = COMBO(my_ja, KC_AMPR),
 [FH_HUSH] = COMBO(my_fh, KC_HASH),
 [JE_EXCL] = COMBO(my_je, KC_EXLM),
@@ -172,6 +174,7 @@ combo_t key_combos[] = {
 
 // command
 [QW_ESC] = COMBO(my_qw, KC_ESC),
+[JF_CAPS] = COMBO(my_jf, QK_CAPS_WORD_TOGGLE),
 
 // Navigation
 [UI_UP] = COMBO(my_ui, KC_UP),
