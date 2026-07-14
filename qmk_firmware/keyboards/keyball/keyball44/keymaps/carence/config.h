@@ -49,3 +49,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LAYER_STATE_8BIT      // 容量削減用途でレイヤー状態を8ビットにする
 #define NO_MUSIC_MODE         // 容量削減用途で音楽モードをオミットする
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
