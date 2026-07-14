@@ -69,20 +69,24 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (layer)
     {
     case 0:
-      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_GRADIENT);
-      rgblight_sethsv_noeeprom(HSV_WHITE);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      rgblight_sethsv_noeeprom(HSV_SPRINGGREEN);
       break;
     case 1:
-      rgblight_sethsv_noeeprom(HSV_CYAN);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_GRADIENT);
+      rgblight_sethsv_noeeprom(HSV_CORAL);
       break;
     case 2:
-      rgblight_sethsv_noeeprom(HSV_GREEN);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      rgblight_sethsv_noeeprom(HSV_AZURE);
       break;
     case 3:
-      rgblight_sethsv_noeeprom(HSV_PURPLE);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      rgblight_sethsv_noeeprom(HSV_ORANGE);
       break;
     case 4:
-      rgblight_sethsv_noeeprom(HSV_MAGENTA);
+      rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+      rgblight_sethsv_noeeprom(HSV_WHITE);
       break;
     default:
       rgblight_sethsv_noeeprom(HSV_OFF);
