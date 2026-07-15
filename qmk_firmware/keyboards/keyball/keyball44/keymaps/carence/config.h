@@ -56,4 +56,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_ACTION_MACRO      // アクションマクロ機能の除外
 #define NO_ACTION_FUNCTION   // アクション関数機能の除外
 
-#define AUTO_MOUSE_THRESHOLD 100 // オートマウスレイヤーに入るかどうかの閾値
+#define AUTO_MOUSE_THRESHOLD 1000 // オートマウスレイヤーに入るかどうかの閾値
