@@ -187,6 +187,11 @@ combo_t key_combos[] = {
 };
 #endif
 
+
+// AUTO_MOUSE_THRESHOLDの独自実装。keyballの最新FWでは当該QMKの機能が未実装のため
+// https://github.com/Yowkees/keyball/issues/596
+// 参考にした資料
+
 #ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
 bool auto_mouse_activation(report_mouse_t mouse_report) {
     static int16_t accum_x = 0;
@@ -228,4 +233,4 @@ bool auto_mouse_activation(report_mouse_t mouse_report) {
     }
     return false;
 }
-#endif
+#endif
