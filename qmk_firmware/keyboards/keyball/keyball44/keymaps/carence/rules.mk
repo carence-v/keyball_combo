@@ -15,4 +15,3 @@ EXTRAKEY_ENABLE = no
 COMMAND_ENABLE = no
 
 CAPS_WORD_ENABLE = yes
-# test windows git-pushing skill
