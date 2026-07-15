@@ -119,7 +119,8 @@ FN_NAMI,
 FY_YAMA,
 
 // command
-QW_ESC,
+WE_ESC,
+JL_ESC,
 JF_CAPS,
 
 // Navigation
@@ -143,7 +144,8 @@ const uint16_t PROGMEM my_fn[] = {KC_F, KC_N, COMBO_END};
 const uint16_t PROGMEM my_fy[] = {KC_F, KC_Y, COMBO_END};
 
 // command
-const uint16_t PROGMEM my_qw[] = {KC_Q, KC_W, COMBO_END};
+const uint16_t PROGMEM my_we[] = {KC_W, KC_E, COMBO_END};
+const uint16_t PROGMEM my_jl[] = {KC_J, KC_L, COMBO_END};
 const uint16_t PROGMEM my_jf[] = {KC_J, KC_F, COMBO_END};
 
 // Navigation
@@ -167,7 +169,8 @@ combo_t key_combos[] = {
 [FY_YAMA] = COMBO(my_fy, KC_PEQL), //[F][Y] の同時押しでハットを入力 (JIS変換用)
 
 // command
-[QW_ESC] = COMBO(my_qw, KC_ESC),
+[WE_ESC] = COMBO(my_we, KC_ESC),
+[JL_ESC] = COMBO(my_jl, KC_ESC),
 [JF_CAPS] = COMBO(my_jf, QK_CAPS_WORD_TOGGLE),
 
 // Navigation
