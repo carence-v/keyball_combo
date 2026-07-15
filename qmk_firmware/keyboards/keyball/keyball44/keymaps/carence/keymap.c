@@ -128,6 +128,8 @@ UI_UP,
 MC_DOWN,
 JK_LEFT,
 KL_RIGHT,
+YU_HOME,
+NM_END,
 };
 
 const uint16_t PROGMEM my_jq[] = {KC_J, KC_Q, COMBO_END};
@@ -153,6 +155,8 @@ const uint16_t PROGMEM my_ui[] = {KC_U, KC_I, COMBO_END};
 const uint16_t PROGMEM my_mco[] = {KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM my_jk[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM my_kl[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM my_yu[] = {KC_Y, KC_U, COMBO_END};
+const uint16_t PROGMEM my_nm[] = {KC_N, KC_M, COMBO_END};
 
 combo_t key_combos[] = {
 [JQ_QUES] = COMBO(my_jq, KC_QUES), //[J][Q] の同時押しで?を入力
@@ -178,5 +182,7 @@ combo_t key_combos[] = {
 [MC_DOWN] = COMBO(my_mco, KC_DOWN),
 [JK_LEFT] = COMBO(my_jk, KC_LEFT),
 [KL_RIGHT] = COMBO(my_kl, KC_RGHT),
+[YU_HOME] = COMBO(my_yu, KC_HOME),
+[NM_END] = COMBO(my_nm, KC_END),
 };
 #endif
