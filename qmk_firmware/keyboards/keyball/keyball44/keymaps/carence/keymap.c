@@ -186,3 +186,46 @@ combo_t key_combos[] = {
 [NM_END] = COMBO(my_nm, KC_END),
 };
 #endif
+
+#ifdef POINTING_DEVICE_AUTO_MOUSE_ENABLE
+bool auto_mouse_activation(report_mouse_t mouse_report) {
+    static int16_t accum_x = 0;
+    static int16_t accum_y = 0;
+    static int16_t accum_h = 0;
+    static int16_t accum_v = 0;
+    static uint16_t last_move_time = 0;
+
+    // トラックボールに動きがあった場合のみ累積と時間更新を行う
+    if (mouse_report.x != 0 || mouse_report.y != 0 || mouse_report.h != 0 || mouse_report.v != 0) {
+        // 最後の動作から 200ms 以上経過していたら、過去の微小な累積をリセット
+        if (timer_elapsed(last_move_time) > 200) {
+            accum_x = 0;
+            accum_y = 0;
+            accum_h = 0;
+            accum_v = 0;
+        }
+        last_move_time = timer_read();
+
+        accum_x += mouse_report.x;
+        accum_y += mouse_report.y;
+        accum_h += mouse_report.h;
+        accum_v += mouse_report.v;
+    }
+
+    // しきい値（config.h の AUTO_MOUSE_THRESHOLD）と比較、またはボタンクリック時に即時判定
+    if (abs(accum_x) > AUTO_MOUSE_THRESHOLD || 
+        abs(accum_y) > AUTO_MOUSE_THRESHOLD || 
+        abs(accum_h) > AUTO_MOUSE_THRESHOLD || 
+        abs(accum_v) > AUTO_MOUSE_THRESHOLD || 
+        mouse_report.buttons) {
+        
+        // トリガー成立時は累積をクリア
+        accum_x = 0;
+        accum_y = 0;
+        accum_h = 0;
+        accum_v = 0;
+        return true;
+    }
+    return false;
+}
+#endif
