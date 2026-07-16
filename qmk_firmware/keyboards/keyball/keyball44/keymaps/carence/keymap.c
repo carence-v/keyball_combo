@@ -234,3 +234,22 @@ bool auto_mouse_activation(report_mouse_t mouse_report) {
     return false;
 }
 #endif
+
+
+// 一時的にCPIを変更するキーを定義（KB18）
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    static uint8_t prev_cpi_value;
+    switch (keycode) {
+    case QK_KB_18:
+        if (record->event.pressed) {
+            prev_cpi_value = keyball_get_cpi();
+            keyball_set_cpi(2); // 一時的に使うCPIを100で割った値を指定
+        } else {
+            keyball_set_cpi(prev_cpi_value);
+        }
+        return false;
+    default:
+        break;
+    }
+    return true;
+}
