@@ -69,19 +69,19 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (layer)
     {
     case 0:
-      rgblight_sethsv_noeeprom(106, 204, 255); // springgreen
+      rgblight_sethsv_noeeprom(106, 204, 180); // springgreen
       break;
     case 1:
-      rgblight_sethsv_noeeprom(200, 241, 255); // magenta
+      rgblight_sethsv_noeeprom(200, 241, 180); // magenta
       break;
     case 2:
-      rgblight_sethsv_noeeprom(177, 204, 255); // deepskyblue
+      rgblight_sethsv_noeeprom(177, 204, 180); // deepskyblue
       break;
     case 3:
-      rgblight_sethsv_noeeprom(236, 178, 255); // rose
+      rgblight_sethsv_noeeprom(236, 178, 180); // rose
       break;
     case 4:
-      rgblight_sethsv_noeeprom(70, 128, 255); // mintgreen
+      rgblight_sethsv_noeeprom(70, 128, 180); // mintgreen
       break;
     default:
       rgblight_sethsv_noeeprom(HSV_OFF);
