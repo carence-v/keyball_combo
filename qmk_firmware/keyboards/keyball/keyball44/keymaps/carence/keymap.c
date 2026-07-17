@@ -66,7 +66,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 
     // LOWER + RAISE = ADJUST のようなTri Layersを使う場合
     // これを先に書いておかないと3の色がおかしくなる らしい
-    state = update_tri_layer_state(state, 1, 2, 3);
+    // state = update_tri_layer_state(state, 1, 2, 3);
 
     // レイヤーごとにRGB色を変える
     uint8_t layer = biton(state);
