@@ -54,6 +54,9 @@ See [document for firmware source code](./qmk_firmware/keyboards/keyball/readme.
 #### レイヤー定義とLEDカラー
 レイヤーの切り替えに応じて、キーボードのLED（アンダーグロウ）の色が自動的に単色で切り替わります（容量削減のため、アニメーション・エフェクトは無効化）。
 
+> [!IMPORTANT]
+> トラックボール側のLEDが電圧関係の問題で正常に発光しない（ちらつきや色化けが発生する）ため、LEDの最大輝度を `128`（以前は `255` や `180`）に下げて調整しています。
+
 実装参考: https://note.com/yinouet1001/n/na3b132c060f3
 
 *   **レイヤー 0 (基本レイヤー)**: `Spring Green`

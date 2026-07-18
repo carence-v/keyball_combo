@@ -76,16 +76,15 @@ layer_state_t layer_state_set_user(layer_state_t state) {
       rgblight_sethsv_noeeprom(106, 204, 128); // springgreen
       break;
     case 1:
-      rgblight_sethsv_noeeprom(200, 241, 128); // magenta
+      rgblight_sethsv_noeeprom(240, 241, 128); // hotpink
       break;
     case 2:
       rgblight_sethsv_noeeprom(177, 204, 128); // deepskyblue
       break;
     case 3:
-      rgblight_sethsv_noeeprom(236, 178, 128); // rose
       break;
     case 4:
-      rgblight_sethsv_noeeprom(70, 128, 128); // mintgreen
+      rgblight_sethsv_noeeprom(50, 128, 128); // mintgreen
       break;
     default:
       rgblight_sethsv_noeeprom(HSV_OFF);
