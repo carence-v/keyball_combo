@@ -21,7 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // 容量削減のため以下をオミット
-// #ifdef RGBLIGHT_ENABLE
+ #ifdef RGBLIGHT_ENABLE
 // #define RGBLIGHT_EFFECT_BREATHING
 // #define RGBLIGHT_EFFECT_RAINBOW_MOOD
 // #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define RGBLIGHT_EFFECT_RGB_TEST
 // #define RGBLIGHT_EFFECT_ALTERNATING
 // #define RGBLIGHT_EFFECT_TWINKLE
-// #endif
+ #endif
 
 #define TAP_CODE_DELAY 5
 #define DYNAMIC_KEYMAP_LAYER_COUNT 5
