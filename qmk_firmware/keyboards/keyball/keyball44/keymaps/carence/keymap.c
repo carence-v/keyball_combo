@@ -69,7 +69,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     // state = update_tri_layer_state(state, 1, 2, 3);
 
     // レイヤーごとにRGB色を変える
-    uint8_t layer = biton32(state);
+    uint8_t layer = biton(state);
     switch (layer)
     {
     case 0:
