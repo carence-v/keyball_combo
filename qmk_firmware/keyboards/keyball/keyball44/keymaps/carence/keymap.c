@@ -265,6 +265,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             keyball_set_cpi(prev_cpi_value);
         }
         return false;
+    case QK_KB_19:
+        if (record->event.pressed) {
+            rgblight_sethsv_noeeprom(HSV_OFF); // 消灯（黒に設定）
+        }
+        return false;
     default:
         break;
     }
