@@ -136,7 +136,7 @@ FY_YAMA,
 WE_ESC,
 JL_ESC,
 JF_CAPS,
-HJ_F5
+HJ_F5,
 
 // Navigation
 UI_UP,
