@@ -73,28 +73,28 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     switch (layer)
     {
     case 0:
-    //  rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
-    //  wait_ms(10);
+      rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
+      wait_ms(10);
       rgblight_sethsv_noeeprom(106, 204, 80); // springgreen
       break;
     case 1:
-     // rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
-    //  wait_ms(10);
+      rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
+      wait_ms(10);
       rgblight_sethsv_noeeprom(255, 230, 177); // hotpink
       break;
     case 2:
-     // rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
-    //  wait_ms(10);
+      rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
+      wait_ms(10);
       rgblight_sethsv_noeeprom(177, 204, 40); // deepskyblue
       break;
     case 3:
-     // rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
-    //  wait_ms(10);
+      rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
+      wait_ms(10);
       rgblight_sethsv_noeeprom(4, 255, 177); // orange
       break;
     case 4:
-     // rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
-    //  wait_ms(10);
+      rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
+      wait_ms(10);
       rgblight_sethsv_noeeprom(39, 230, 102); // mintgreen
       break;
     default:
