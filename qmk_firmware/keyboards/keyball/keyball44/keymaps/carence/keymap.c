@@ -75,12 +75,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case 0:
       rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
       wait_ms(10);
-      rgblight_sethsv_noeeprom(106, 204, 40); // springgreen
+      rgblight_sethsv_noeeprom(106, 204, 80); // springgreen
       break;
     case 1:
       rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
       wait_ms(10);
-      rgblight_sethsv_noeeprom(255, 241, 40); // hotpink
+      rgblight_sethsv_noeeprom(255, 230, 177); // hotpink
       break;
     case 2:
       rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
@@ -90,12 +90,12 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     case 3:
       rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
       wait_ms(10);
-      rgblight_sethsv_noeeprom(240, 241, 40); // hotpink
+      rgblight_sethsv_noeeprom(4, 255, 177); // orange
       break;
     case 4:
       rgblight_sethsv_noeeprom(HSV_OFF); // 一旦完全に消灯
       wait_ms(10);
-      rgblight_sethsv_noeeprom(50, 128, 40); // mintgreen
+      rgblight_sethsv_noeeprom(39, 230, 102); // mintgreen
       break;
     default:
       rgblight_sethsv_noeeprom(HSV_OFF);
@@ -136,6 +136,7 @@ FY_YAMA,
 WE_ESC,
 JL_ESC,
 JF_CAPS,
+HJ_F5
 
 // Navigation
 UI_UP,
@@ -163,6 +164,7 @@ const uint16_t PROGMEM my_fy[] = {KC_F, KC_Y, COMBO_END};
 const uint16_t PROGMEM my_we[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM my_jl[] = {KC_J, KC_L, COMBO_END};
 const uint16_t PROGMEM my_jf[] = {KC_J, KC_F, COMBO_END};
+const uint16_t PROGMEM my_hj[] = {KC_H, KC_J, COMBO_END};
 
 // Navigation
 const uint16_t PROGMEM my_ui[] = {KC_U, KC_I, COMBO_END};
@@ -190,6 +192,7 @@ combo_t key_combos[] = {
 [WE_ESC] = COMBO(my_we, KC_ESC),
 [JL_ESC] = COMBO(my_jl, KC_ESC),
 [JF_CAPS] = COMBO(my_jf, QK_CAPS_WORD_TOGGLE),
+[HJ_F5] = COMBO(my_hj, KC_F5),
 
 // Navigation
 [UI_UP] = COMBO(my_ui, KC_UP),
